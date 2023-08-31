@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script defer src="./main.js"></script>
+    <script src="https://kit.fontawesome.com/fc72f3e5d3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <div class="logo"><i class="fa-brands fa-earlybirds"></i>TO-DODO</div>
+            <div class="links">
+                
+                <button id="add-btn"><i class="fa-solid fa-plus"></i></button>
+            </div>
+            
+        </div>
+        <div id="main-container">
+            
+        </div>
+    </div>
+
+
+    <div class="blur-container hidden">
+        <div class="add-container">
+            <form action="" id="entry-login">
+                <div class="form-element">
+                                <label for="todoName">To-do Name</label>
+                                <input type="text"  name="todoName" id="todoName" required>
+    
+                </div>
+                <div class="form-element">
+                    <label for="dueDate">Due Date</label>
+                    <input type="date" name="dueDate" id="dueDate" required>
+
+                </div>
+                <div class="form-element">
+                    <label for="formPriority">Priority</label>
+
+                    <select name="formPriority" id="formPriority">
+                        <option value="urgent">Urgent</option>
+                        <option value="important">Important</option>
+                        <option value="optional">Optional</option>
+                        <option value="unscheduled">Unscheduled</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <label for="description">Description</label>
+                    <textarea required name="description" id="description" cols="30" rows="10"></textarea>
+                </div>
+                <button id="add-to-do"><i class="fa-solid fa-square-plus"></i> </button>
+                <button id="cancel-adding-btn"><i class="fa-solid fa-ban"></i></button>
+            </form>
+            
+        </div>
+    </div>
+    <div class="blur-container-remove hidden">
+        <div class="remove-container">
+            <h1>Are you sure?</h1>
+            <div class="buttons">
+
+            <button class="yes">Yes</button><button class="no">No</button>
+        
+            </div>
+        </div>
+    </div>
+
+    <div class="blur-container-edit hidden">
+        <div class="add-container">
+            <form action="" id="entry-login">
+                <div class="form-element">
+                                <label for="editName">To-do Name</label>
+                                <input type="text"  name="editName" id="editName" required>
+    
+                </div>
+                <div class="form-element">
+                    <label for="editDate">Due Date</label>
+                    <input type="date" name="editDate" id="editDate" required>
+
+                </div>
+                <div class="form-element">
+                    <label for="editPriority">Priority</label>
+
+                    <select name="editPriority" id="editPriority" required>
+                        <option value="urgent">Urgent</option>
+                        <option value="important">Important</option>
+                        <option value="optional">Optional</option>
+                        <option value="unscheduled">Unscheduled</option>
+                    </select>
+                </div>
+                <div class="form-element">
+                    <label for="editDescription">Description</label>
+                    <textarea required name="editDescription" id="editDescription" cols="30" rows="5"></textarea>
+                </div>
+                <button id="update-to-do"><i class="fa-regular fa-pen-to-square"></i> </button>
+                <button id="cancel-updating-btn"><i class="fa-solid fa-ban"></i>  </button>
+            </form>
+            
+        </div>
+    </div>
+</body>
+</html>

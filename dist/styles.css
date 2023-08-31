@@ -1,0 +1,264 @@
+:root{
+    font-size: 16px;
+}
+*{
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 100vh;
+    background: url("https://wallpapercave.com/wp/wp8773174.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#header{
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+#header .logo{
+    letter-spacing: 0.25rem;
+    font-weight: 800;
+    font-size: 2rem;
+    color: white;
+    user-select: none;
+}
+
+#header .logo i{
+    margin-right: 1.25rem;
+}
+
+#header button{
+    border: none;
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: #A7A9E1;
+    color:#3f2c4f;
+    border-radius: 1rem;
+}
+#header button:hover{
+    background-color: white;
+    color: #3f2c4f  ;
+}
+#main-container{
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,25rem);
+    justify-content: center;
+    gap: 2rem;
+}
+.to-do{
+    border: 0.1rem solid #3f2c4f;
+    border-radius: 1.25rem;
+    width: 25rem;
+    height: 30rem;
+    backdrop-filter: blur(0.75rem);
+    margin-top: 3rem;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:#3f2c4f;
+    font-size: 1.1rem;
+}
+.to-do .buttons{
+    display: flex;
+    justify-content: center;
+
+}
+.to-do .buttons button{
+    width: 50%;
+    padding: 1rem;
+    margin-left: 0.75rem;
+    border-radius:1rem;
+    color:white;
+    border: none;
+    font-size: 1rem;
+}
+.to-do h3,.to-do h1{
+    margin-bottom: 1.25rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.to-do p{
+    margin-bottom: 1.25rem;
+    
+}
+.to-do h1{
+    font-size: 1.8rem;
+    text-align: center;
+}
+.blur-container,.blur-container-remove,.blur-container-edit{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    min-height: 100%;
+    backdrop-filter: blur(0.3rem);
+    z-index: 5;
+
+    
+}
+.remove-container{
+    padding: 7rem 0;
+    top: 15rem;
+    left: 25%;
+    position: absolute;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.buttons{
+    margin-top: 3rem;
+    display: grid;
+    grid-template-rows: max-content max-content ;
+    gap: 3rem;
+    justify-content: space-around;
+}
+.remove-container button{
+    width: 9rem;
+    padding: 1.25rem;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    border: 0.1rem solid #2D2F7A;
+    color: white;
+}
+
+.yes{
+    background-color: forestgreen;
+}
+.no{
+    background-color: crimson;
+}
+.add-container{
+    top: 10rem;
+    left: 25%;
+    position: absolute;
+    width: 50%;
+    height: 75%;
+    background-color: white;
+    border-radius: 1rem;
+}
+#entry-login{
+    padding: 1.25rem;
+    display: grid;
+    gap: 2rem;
+}
+.form-element{
+    font-size: 1.5rem;
+    display: grid;
+}
+
+.form-element input,
+.form-element select
+{
+    width: 100%;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+    height: 3rem;
+    
+}
+.form-element textarea{
+    height: 12rem;
+    font-size: 1.25rem;
+    padding: 0.25rem;
+}
+form button{
+    font-size: 1.5rem;
+    border: none;
+    background: transparent;
+}
+#add-to-do:hover,
+#cancel-adding-btn:hover{
+    color: limegreen;
+    cursor: pointer;
+}
+#add-to-do{
+    position: absolute;
+    bottom: 1.25rem;
+    right: 50%;
+    color: #4CB37F;
+}
+#cancel-adding-btn{
+    position: absolute;
+    top: 1rem;
+    color: #B34C80;
+    right: 1rem;
+}
+
+.hidden{
+    display: none;
+}
+
+.add-btn{
+    background-color: #446584;
+}
+.remove-btn{
+    background-color: #ba5b5b;
+}
+
+
+@media  (max-width:1200px) {
+    :root{
+        font-size: 15px;
+    }
+}
+
+
+
+@media  (max-width:1000px) {
+    :root{
+        font-size: 14px;
+    }
+    #header{
+        display: flex;
+        justify-content: center;
+    }
+    #header .logo{
+        position: absolute;
+        top: 1rem;
+    }
+    #header button{
+        position: fixed;
+        bottom: 1rem;
+        justify-self: center;
+        z-index: 2;
+    }
+}
+
+
+
+@media  (max-width:800px) {
+    :root{
+        font-size: 13px;
+    }
+}
+
+
+
+@media  (max-width:600px) {
+    :root{
+        font-size: 12px;
+    }
+}
+
+@media  (max-width:400px) {
+    :root{
+        font-size: 11px;
+    }
+}@media  (max-width:300px) {
+    :root{
+        font-size: 10px;
+    }
+}
